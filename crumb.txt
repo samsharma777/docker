@@ -1,0 +1,6 @@
+http://jenkins.local.com:8080/job/ENV_TEST/build?delay=0sec
+
+crumb=$(curl -u "jenkins:changeme" -s 'http://jenkins.local.com:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)')
+
+
+curl -u "jenkins:changeme" -s 'http://jenkins.local.com:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
